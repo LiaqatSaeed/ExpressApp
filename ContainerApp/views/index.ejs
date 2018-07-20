@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+
+      <% employees.forEach(function(el, index) { %>
+        <div style="background-color: gainsboro;margin: 5px">
+            <span>Name: </span>
+          <span><%= el.Name %></span><br><br>
+          <span>Designation: </span>
+          <span><%= el.Designation %></span><br><br>
+        
+        </div>
+    <% }) %>
+
+
+
+    <form action="/users" method="post">
+      <label for="usrName">Enter name: </label>
+      <input id="usrName" type="text" name="Name" value="" >
+      <label for="usrDesignation">Enter Designation: </label>
+      <input id="usrDesignation" type="text" name="Designation" value="" >     
+      <input type="submit" value="OK">
+  </form>
+  </body>
+</html>
